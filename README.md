@@ -334,7 +334,7 @@ docker exec -it kafka-1 kafka-console-consumer \
 
 ## How This Maps to Real Enterprise Systems
 
-### Kafka Topic to Business Domain Mapping
+#### Kafka Topic to Business Domain Mapping
 
 | Kafka Topic | Real-World System | Description |
 |:------------|:------------------|:------------|
@@ -342,8 +342,9 @@ docker exec -it kafka-1 kafka-console-consumer \
 |  `payments` | **Billing / Finance** | Transactions, invoices, revenue tracking |
 |  `shipping` | **Logistics** | Shipping, delivery, warehouse operations |
 
+--- 
 
-## Microservices Event-Driven Architecture
+#### Microservices Event-Driven Architecture
 
 | Event Type | Kafka Topic | Owning Service | Business Domain |
 |------------|-------------|----------------|-----------------|
@@ -351,9 +352,22 @@ docker exec -it kafka-1 kafka-console-consumer \
 | Payment Events | `payments` | Payment Service | Billing / Finance |
 | Shipping Events | `shipping` | Shipping Service | Logistics |
 
-### Event Flow:
+#### Event Flow:
 1. Order Service publishes to `orders` topic
 2. Payment Service subscribes to `orders`, publishes to `payments`
 3. Shipping Service subscribes to `payments`, publishes to `shipping`
+
+---
+
+#### Kafka Ownership Matrix
+
+| Domain | Topic | Consumer Group | Owning Team | Contact |
+|--------|-------|----------------|-------------|---------|
+| Orders | `orders` | `orders-service` | Backend | @backend-team |
+| Payments | `payments` | `payments-service` | Finance | @finance-team |
+| Shipping | `shipping` | `shipping-service` | Operations | @operations-team |
+
+
+---
 
 
