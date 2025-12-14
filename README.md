@@ -370,4 +370,50 @@ docker exec -it kafka-1 kafka-console-consumer \
 
 ---
 
+## Roadmap (Future Enhancements)
+
+- Schema Registry (Avro / Protobuf)
+
+- Dead-letter topics (DLQs)
+
+- Exactly-once semantics
+
+- Kafka Streams / Flink
+
+- Security (SASL / ACLs)
+
+- Kubernetes deployment (Strimzi)
+
+- Monitoring (Prometheus + Grafana)
+
+---
+
+## License
+
+#### MIT License
+
+---
+
+## Final Notes
+
+#### This project is not a toy example.
+
+##### It demonstrates how Kafka is actually used in production:
+
+- Event-driven
+
+- Domain-oriented
+
+- Microservice-aligned
+
+- Enterprise-scalable
+
+##### It is suitable as:
+
+- a starter template
+
+- a learning platform
+
+- a portfolio-grade Kafka project
+
 
