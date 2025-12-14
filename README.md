@@ -300,6 +300,7 @@ python producers/producer.py
 
 ##### Each consumer will receive only the events relevant to its domain.
 
+---
 
 ## Troubleshooting & Validation
 
@@ -330,5 +331,15 @@ docker exec -it kafka-1 kafka-console-consumer \
 ```
 
 ---
+
+## How This Maps to Real Enterprise Systems
+
+### Kafka Topic to Business Domain Mapping
+
+| Kafka Topic | Real-World System | Description |
+|:------------|:------------------|:------------|
+|  `orders` | **Order Management** | Customer orders, inventory, fulfillment |
+|  `payments` | **Billing / Finance** | Transactions, invoices, revenue tracking |
+|  `shipping` | **Logistics** | Shipping, delivery, warehouse operations |
 
 
