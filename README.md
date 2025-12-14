@@ -27,3 +27,19 @@
 - Shipments are dispatched
 
 ##### Each step is handled asynchronously using Kafka topics.
+
+---
+
+## Core Enterprise Principle
+
+##### Each downstream service gets its own consumer group.
+
+##### This ensures:
+
+- [x] Independent scaling
+
+- [x] Fault isolation
+
+- [x] Clean separation of responsibilities
+
+- [x] True microservices behavior
