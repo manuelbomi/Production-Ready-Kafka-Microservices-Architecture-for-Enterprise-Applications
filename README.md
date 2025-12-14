@@ -344,6 +344,8 @@ docker exec -it kafka-1 kafka-console-consumer \
 
 ## Example Outputs 
 
+**consumer_orders.py generates outputs immediately after producer.py generate an event**
+
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/a6e2c823-1a0c-432e-860f-bcec93debf15" />
 
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/a17a5da7-f08d-4456-bdbe-6a85a4625002" />
