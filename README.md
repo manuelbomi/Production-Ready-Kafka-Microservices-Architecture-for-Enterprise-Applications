@@ -301,3 +301,34 @@ python producers/producer.py
 ##### Each consumer will receive only the events relevant to its domain.
 
 
+## Troubleshooting & Validation
+
+##### List Topics
+
+```python
+docker exec -it kafka-1 kafka-topics \
+  --list \
+  --bootstrap-server localhost:9092
+```
+
+##### Describe a Topic
+
+```python
+docker exec -it kafka-1 kafka-topics \
+  --describe \
+  --topic orders \
+  --bootstrap-server localhost:9092
+```
+
+##### Consume from CLI
+
+```python
+docker exec -it kafka-1 kafka-console-consumer \
+  --bootstrap-server localhost:9092 \
+  --topic orders \
+  --from-beginning
+```
+
+---
+
+
