@@ -250,6 +250,45 @@ signal.signal(signal.SIGTERM, shutdown)
 
 ---
 
+#### ✔ Multi-Broker Awareness
+
+```python
+"bootstrap.servers": "localhost:9092,localhost:9093,localhost:9094"
+```
+
+
+#### Provides:
+
+- High availability
+
+- Automatic failover
+
+- Broker resilience
+
+---
+
+## How to Run the Platform
+
+- [x] Start Kafka Cluster
+
+```python
+docker compose up -d
+```
+
+##### Verify:
+
+```python
+docker ps
+```
+
+- [x] Start Consumers (in separate terminals)
+
+```python
+python consumers/consumer_orders.py
+python consumers/consumer_payments.py
+python consumers/consumer_shipping.py
+```
+
 
 
 
