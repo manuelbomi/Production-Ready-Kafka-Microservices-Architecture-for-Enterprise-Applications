@@ -68,3 +68,22 @@ enterprise-kafka-platform/
 └── README.md
 
 ```
+This structure is intentionally PyCharm-friendly and easy to scaffold for new services.
+
+---
+
+## Kafka Architecture – Topics & Consumers
+
+
+#### Kafka Topic-Consumer Mapping
+
+| Domain | Topic | Consumer App | Consumer Group | Function | Expected Load |
+|--------|-------|--------------|----------------|----------|---------------|
+| Order Management | `orders` | `consumer_orders.py` | `orders-service` | Processes order creation/updates | High |
+| Payment Processing | `payments` | `consumer_payments.py` | `payments-service` | Handles payment transactions | Medium |
+| Logistics | `shipping` | `consumer_shipping.py` | `shipping-service` | Manages shipping logistics | Medium |
+
+### Design Notes:
+- Each consumer group allows independent scaling per service
+- Domain-driven topic naming for clarity
+- Single responsibility consumers for maintainability
