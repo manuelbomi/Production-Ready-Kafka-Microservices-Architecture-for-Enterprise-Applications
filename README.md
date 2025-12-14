@@ -87,3 +87,42 @@ This structure is intentionally PyCharm-friendly and easy to scaffold for new se
 - Each consumer group allows independent scaling per service
 - Domain-driven topic naming for clarity
 - Single responsibility consumers for maintainability
+
+---
+
+## Key Design Principles
+
+#### 1. One topic per domain
+
+Clear separation of business concerns
+
+#### 2. Dedicated consumer groups
+Each service scales independently
+
+#### 3. Single-responsibility consumers
+
+One consumer = one domain = one concern
+
+---
+
+## Kafka Cluster Architecture
+
+#### Brokers (KRaft Mode)
+
+##### The Docker Compose file provisions a 3-broker Kafka cluster:
+
+```python
+kafka-1 → localhost:9092
+kafka-2 → localhost:9093
+kafka-3 → localhost:9094
+```
+
+✔ Multi-broker
+
+✔ KRaft quorum (3 controllers)
+
+✔ Replication factor = 3
+
+✔ No ZooKeeper
+
+##### This mirrors modern production Kafka deployments.
