@@ -187,4 +187,12 @@ docker exec -it kafka-1 kafka-topics \
 "group.id": "orders-service"
 ```
 
+##### Allows:
+
+- Horizontal scaling
+
+- Load balancing
+
+- Fault tolerance
+
 
