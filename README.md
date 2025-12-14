@@ -280,7 +280,7 @@ docker compose up -d
 ```python
 docker ps
 ```
-
+---
 - [x] Start Consumers (in separate terminals)
 
 ```python
@@ -289,6 +289,15 @@ python consumers/consumer_payments.py
 python consumers/consumer_shipping.py
 ```
 
+---
 
+- [x] Run the Producer
+
+```python
+python producers/producer.py
+```
+
+
+##### Each consumer will receive only the events relevant to its domain.
 
 
