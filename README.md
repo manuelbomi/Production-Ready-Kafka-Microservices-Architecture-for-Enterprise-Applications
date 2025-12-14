@@ -168,3 +168,15 @@ docker exec -it kafka-1 kafka-topics \
 "acks": "all"
 "retries": 5
 ```
+
+##### This ensures:
+
+- Strong delivery guarantees
+
+- Safe retries
+
+- Enterprise-grade reliability
+
+---
+
+
