@@ -343,3 +343,17 @@ docker exec -it kafka-1 kafka-console-consumer \
 |  `shipping` | **Logistics** | Shipping, delivery, warehouse operations |
 
 
+## Microservices Event-Driven Architecture
+
+| Event Type | Kafka Topic | Owning Service | Business Domain |
+|------------|-------------|----------------|-----------------|
+| Order Events | `orders` | Order Service | Order Management |
+| Payment Events | `payments` | Payment Service | Billing / Finance |
+| Shipping Events | `shipping` | Shipping Service | Logistics |
+
+### Event Flow:
+1. Order Service publishes to `orders` topic
+2. Payment Service subscribes to `orders`, publishes to `payments`
+3. Shipping Service subscribes to `payments`, publishes to `shipping`
+
+
