@@ -126,3 +126,26 @@ kafka-3 → localhost:9094
 ✔ No ZooKeeper
 
 ##### This mirrors modern production Kafka deployments.
+
+---
+
+## Enterprise Topics
+
+##### Topics are created with partitioning and replication for scalability and fault tolerance.
+
+#### Create Topics
+
+```python
+docker exec -it kafka-1 kafka-topics \
+  --create \
+  --topic orders \
+  --partitions 6 \
+  --replication-factor 3 \
+  --bootstrap-server localhost:9092
+```
+
+#### Repeat for:
+
+- payments
+
+- shipping
