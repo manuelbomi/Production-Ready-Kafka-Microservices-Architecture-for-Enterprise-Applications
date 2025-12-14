@@ -357,6 +357,10 @@ docker exec -it kafka-1 kafka-console-consumer \
 
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/33ebdb2a-35a7-4016-8752-1dd1e4ba971d" />
 
+
+<ins> *consumer_shipping.py* generates outputs immediately after producer.py generate an event</ins>
+
+
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/17733f46-fc77-4b84-8d1d-a787e1075b0f" />
 
 
