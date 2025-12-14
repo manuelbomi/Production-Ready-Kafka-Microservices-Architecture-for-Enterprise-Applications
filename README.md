@@ -275,6 +275,9 @@ signal.signal(signal.SIGTERM, shutdown)
 docker compose up -d
 ```
 
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/8e83a985-5cea-424b-85b8-1eaa082a5866" />
+
+
 ##### Verify:
 
 ```python
@@ -287,7 +290,12 @@ docker ps
 python consumers/consumer_orders.py
 python consumers/consumer_payments.py
 python consumers/consumer_shipping.py
+
 ```
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/ca8a6eb6-88c6-4f3b-9f63-b020b7204025" />
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/b6fe1449-f3d3-4fb3-a0d9-72aa1699b5af" />
 
 ---
 
@@ -296,6 +304,8 @@ python consumers/consumer_shipping.py
 ```python
 python producers/producer.py
 ```
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/212cc5b0-da0d-4b0d-b619-c897cf897f73" />
 
 
 ##### Each consumer will receive only the events relevant to its domain.
@@ -331,6 +341,17 @@ docker exec -it kafka-1 kafka-console-consumer \
 ```
 
 ---
+
+## Example Outputs 
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/a6e2c823-1a0c-432e-860f-bcec93debf15" />
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/a17a5da7-f08d-4456-bdbe-6a85a4625002" />
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/33ebdb2a-35a7-4016-8752-1dd1e4ba971d" />
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/17733f46-fc77-4b84-8d1d-a787e1075b0f" />
+
 
 ## How This Maps to Real Enterprise Systems
 
