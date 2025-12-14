@@ -181,7 +181,7 @@ docker exec -it kafka-1 kafka-topics \
 
 ## What Makes This Production-Grade
 
-✔ Dedicated Consumer Groups
+#### ✔ Dedicated Consumer Groups
 
 ```python
 "group.id": "orders-service"
@@ -194,5 +194,62 @@ docker exec -it kafka-1 kafka-topics \
 - Load balancing
 
 - Fault tolerance
+
+---
+
+#### ✔ Manual Offset Management
+
+```python
+"enable.auto.commit": False
+consumer.commit(message=msg)
+```
+
+
+##### Ensures:
+
+- No message loss
+
+- No premature commits
+
+- Safe recovery after failures
+
+---
+
+#### ✔ Graceful Shutdown Handling
+
+```python
+signal.signal(signal.SIGINT, shutdown)
+signal.signal(signal.SIGTERM, shutdown)
+```
+
+
+##### Required for:
+
+- Docker containers
+
+- Kubernetes pods
+
+- Rolling deployments
+
+---
+
+#### ✔ Structured Logging
+
+```python
+2025-01-10 | INFO | orders-consumer | Order received | ...
+```
+
+
+##### Essential for:
+
+- Observability
+
+- Debugging
+
+- Production monitoring
+
+---
+
+
 
 
