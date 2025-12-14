@@ -149,3 +149,22 @@ docker exec -it kafka-1 kafka-topics \
 - payments
 
 - shipping
+
+---
+
+## Producer Design
+
+##### The producer publishes events to multiple topics:
+
+- orders
+
+- payments
+
+- shipping
+
+##### It is configured with:
+
+```python
+"acks": "all"
+"retries": 5
+```
