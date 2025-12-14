@@ -179,4 +179,12 @@ docker exec -it kafka-1 kafka-topics \
 
 ---
 
+## What Makes This Production-Grade
+
+✔ Dedicated Consumer Groups
+
+```python
+"group.id": "orders-service"
+```
+
 
