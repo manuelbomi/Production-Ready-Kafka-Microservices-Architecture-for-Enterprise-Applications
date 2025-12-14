@@ -4,6 +4,8 @@
 
 ##### This project showcases how to design, deploy, and scale Kafka-based systems using multiple domains, multiple consumer groups, and modern KRaft mode (no ZooKeeper).
 
+---
+
 ## Project Overview
 
 ##### This repository demonstrates a realistic enterprise Kafka architecture where:
@@ -43,3 +45,26 @@
 - [x] Clean separation of responsibilities
 
 - [x] True microservices behavior
+
+---
+
+## Project Structure
+
+```python
+enterprise-kafka-platform/
+│
+├── docker-compose.yaml
+│
+├── producers/
+│   └── producer.py
+│
+├── consumers/
+│   ├── consumer_orders.py
+│   ├── consumer_payments.py
+│   └── consumer_shipping.py
+│
+├── .venv/
+│
+└── README.md
+
+```
